@@ -126,6 +126,9 @@ def make_new_folder(content_type, use_new_folder, model_name):
     elif content_type == "VAE":
         folder = "models/VAE"
         new_folder = "models/VAE/new"
+    elif content_type == "LORA":
+        folder = "extensions/sd-webui-additional-networks/models/lora"
+        new_folder = "extensions/sd-webui-additional-networks/models/lora/new"
     if content_type == "TextualInversion" or content_type == "VAE" or content_type == "AestheticGradient":
         if use_new_folder:
             model_folder = new_folder
