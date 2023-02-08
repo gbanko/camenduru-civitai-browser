@@ -165,7 +165,7 @@ def download_file_thread(url, file_name, content_type, use_new_folder, model_nam
 
 def save_text_file(file_name, content_type, use_new_folder, trained_words, model_name):
     model_folder = make_new_folder(content_type, use_new_folder, model_name)
-
+    
     path_to_new_file = os.path.join(model_folder, file_name.replace(".ckpt",".txt").replace(".safetensors",".txt").replace(".pt",".txt").replace(".yaml",".txt"))
     if not os.path.exists(path_to_new_file):
         with open(path_to_new_file, 'w') as f:
